@@ -1,0 +1,9 @@
+<%= javascript_include_tag "posts" %>
+<%= stylesheet_link_tag  'posts'%>
+<h1>@<%=username%></h1>
+<% if logged_in && username == session[:username] #ApplicationHelper %>
+  <%= render :partial  => 'form' %>
+<% end %>
+<div class="post_feed_wrapper">
+  <%= render :partial  => 'feed', :locals => {posts:@posts,username:username} %>
+</div>

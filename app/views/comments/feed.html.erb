@@ -1,0 +1,15 @@
+<% if @comments.blank? %>
+	<div class="comment_error">Currently there are no comments...</div>
+<% else %>
+	<% @comments.each do |comment| %>
+		<div class="comment_wrapper">
+			<div class="comment"><%=comment.content%></div>
+			<% username = User.get_username_by_id(comment.user_id) %>
+			<div class="username"><a href="/<%=username%>/">@<%=username%><a/></div>
+			<div class="create_on"><%=comment.created_at.strftime "%Y-%m-%d %H:%M"%></div>
+		    <% if !@user_id.blank? && @user_id == comment.user_id %>
+		        <a class="delete_comment" href="/comments/<%=@post_id%>/delete/<%=comment.id%>/">Delete</a>
+		    <% end %>
+		</div>
+	<% end %>
+<% end %>

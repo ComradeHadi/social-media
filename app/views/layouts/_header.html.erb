@@ -1,0 +1,19 @@
+<div class="header_wrapper">
+	<div class="header">
+		<a class="logo" href="/"></a>
+		<div class="right_content">
+			<div class="search_wrapper">
+				<form method="get" action="/search/">
+					<input class="search_input" name="search" type="text"/>
+					<input type="submit" name="submit"  value="" class="search" />
+				</form>
+			</div>
+			<% if !session[:username].blank? && !session[:email].blank? %>
+				<div class="links">
+					<a href="/user/edit/"><%=session[:username]%></a>
+					<a href="/user/logout/">Signout</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

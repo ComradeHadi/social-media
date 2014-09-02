@@ -1,0 +1,41 @@
+<%= javascript_include_tag "jquery.wallform","classes/user","edit" %>
+<%= stylesheet_link_tag  'edit'%>
+<% if !@userinfo.blank? %>
+<div class="edit_message"></div>
+<div class="edit_wrapper">
+	<div class="edit_form_wrapper">
+		<form class="edit" method="post" action="/user/edit/" accept-charset="UTF-8">
+			<div class="row">
+				<label for="Username">Username</label>
+				<input type="text" name="Username" id="Username" value="<%=@userinfo['username']%>"/>
+				<span class="username_error"></span>
+			</div>
+			<div class="row">
+				<label for="Email">Email</label>
+				<input type="text" name="Email" id="Email" value="<%=@userinfo['email']%>"/>
+				<span class="email_error"></span>
+			</div>
+			<div class="row">
+				<label for="First">First Name</label>
+				<input type="text" name="First" id="First" value="<%=@userinfo['first_name']%>"/>
+				<span class="first_error"></span>
+			</div>
+			<div class="row">
+				<label for="Last">Last Name</label>
+				<input type="text" name="Last" id="Last" value="<%=@userinfo['last_name']%>"/>
+				<span class="last_error"></span>
+			</div>
+			<div class="row">
+				<label for="Password">Password</label>
+				<input type="password" name="Password" id="Password"/>
+				<span class="password_error"></span>
+			</div>
+			<div class="row">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+<% else %>
+	<div class="edit_user_not_found">User information not found</div>
+<% end %>

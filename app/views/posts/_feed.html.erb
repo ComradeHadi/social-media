@@ -1,0 +1,16 @@
+<% posts.each do |post| %>
+  <div class="post_feed_item_wrapper">
+    <div class="post_content"><%= post.content %></div>
+    <div class="create_on"><%=post.created_at.strftime "%Y-%m-%d %H:%M"%></div>
+    <div class="links">
+    	<a class="comments_post" href="/comments/<%=post.id%>/feed/">Comments</a>
+	    <% if session[:username] == username %>
+	        <a class="delete_post" href="/posts/delete/<%=post.id%>/">Delete</a>
+	    <% end %>
+    </div>
+    <div class="comments_wrapper"></div>
+    <% if logged_in %>
+    	<%= render :partial => "/comments/form", :locals => {id:post.id} %>
+    <% end %>
+  </div>
+<% end %>

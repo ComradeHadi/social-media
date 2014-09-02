@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag  'search'%>
+<% if @users_info.blank? %>
+	<div class="blank_search">Sorry there is not result for your search on "<%params[:search]%>"</div>
+<% else %>
+	<% @users_info.each do |user_info| %>
+		<div class="user_wrapper">
+			<div class="username"><a href="/<%=user_info.username%>/">@<%=user_info.username%></a></div>
+			<div class="user_description_wrapper">
+				<div class="name"><%=user_info.first_name%> <%=user_info.last_name%></div>
+				<div class="email"><%=user_info.email%></div>
+				<div class="joined">Joined:<%=user_info.created_on.strftime "%Y-%m-%d %H:%M"%></div>
+				<div class="last_on">Last on:<%=user_info.signed_in_on.strftime "%Y-%m-%d %H:%M"%></div>
+			</div>
+		</div>
+	<% end %>
+<% end %>

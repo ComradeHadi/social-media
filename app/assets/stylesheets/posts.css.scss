@@ -1,0 +1,108 @@
+@import "common/helper";
+@import "common/variables";
+@import "common/mixin";
+h1{
+	font-family:$font-family;
+	font-size:$font-size-large;
+	color:$main-color;
+}
+
+.new_post_wrapper{
+	float:right;
+	font-family:$font-family;
+	font-size:$font-size-med;
+	width:30%;
+
+	.new_post_title{
+		font-weight: 900;
+	}
+	.posts_message{
+		color:#A0A0A0;
+		font-size:$font-size-reg;
+		height:15px;
+		margin: 0px 10px;
+	}
+	textarea{
+		height: 200px;
+		resize: none;
+		width: 100%;
+	}
+
+	button{
+		@include btn($main-color);
+		float: right;
+		font-size:$font-size-large;
+		margin-left: 132px;
+		margin-top: 10px;
+		padding: 5px;
+	}
+}
+.post_feed_wrapper{
+	float: left;
+	font-family:$font-family;
+	margin:10px 0px;
+	width: 60%;
+
+	.post_feed_item_wrapper{
+		border-bottom: 1px solid #A0A0A0;
+		clear:both;
+		float:left;
+		margin:10px 0px;
+		padding-bottom:20px;
+		width:100%;
+
+		.post_content{
+			font-size:$font-size-med;
+		}
+		.create_on{
+			color:#A0A0A0;
+			font-size:$font-size-reg;
+			margin: 0px 20px;
+		}
+		a{
+			color:$main-color;
+			margin: 0px 10px;
+			text-decoration: none;
+		}
+	}
+	.comments_wrapper{
+		display:none;
+		margin: 10px 30px;
+
+		.username,
+		.create_on,
+		.delete_post{
+			float:left;
+		}
+
+	}
+	.create_commlmen_wrapper{
+		display:none;
+
+		.new_comment_title{
+			clear:both;
+			font-weight: 900;
+		}
+		.comment_message{
+			color:#A0A0A0;
+			font-size:$font-size-reg;
+			height:15px;
+			margin: 0px 10px;
+		}
+		textarea{
+			float:left;
+			height: 50px;
+			resize: none;
+			width: 100%;
+		}
+		button{
+			@include btn($main-color);
+			clear:both;
+			float: right;
+			font-size:$font-size-large;
+			margin-left: 132px;
+			margin-top: 10px;
+			padding: 5px;
+		}
+	}
+}

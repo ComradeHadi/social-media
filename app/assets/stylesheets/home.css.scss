@@ -1,0 +1,34 @@
+@import "common/helper";
+@import "common/variables";
+@import "common/mixin";
+.signup_wrapper{
+	border-right: 1px solid $secondary-color;
+}
+.signup_wrapper, .login_wrapper{
+	float:left;
+	margin: 50px 0px;
+	padding: 50px 0px;
+	width:49%;
+	font-family:$font-family;
+	h1{
+		color:$main-color;
+		font-size:$font-size-large;
+		margin: 0px 0px 10px 130px;
+	}
+
+	label{
+		display: inline-block;
+		padding-left: 26px;
+		width: 100px;
+	}
+	input{
+		@include input($secondary-color, $font-size-reg);
+	}
+	button{
+		@include btn($main-color);
+		font-size:$font-size-large;
+		margin-left: 132px;
+		margin-top: 10px;
+		padding: 5px;
+	}
+}

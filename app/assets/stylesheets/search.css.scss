@@ -1,0 +1,17 @@
+@import "common/helper";
+@import "common/variables";
+@import "common/mixin";
+
+.user_wrapper{
+	border-bottom: 1px solid $secondary-color;
+
+	font-family:$font-family;
+	.username a{
+		color:$main-color;
+		font-size:$font-size-large;
+		text-decoration: none;
+	}
+	.user_description_wrapper{
+		margin:10px 20px;
+	}
+}

@@ -1,0 +1,19 @@
+@mixin btn($btn_color:#8bc63f,$font-color:#fff){
+	background: $btn_color no-repeat;
+	border: none;
+	box-shadow: 1px 1px 0px 1px $btn_color,-1px 1px 0px 1px $btn_color,1px -1px 0px 1px $btn_color,-1px -1px 0px 1px $btn_color;
+	clear: both;
+	color: $font-color;
+	text-align: center;
+	text-decoration: none;
+}
+@mixin input($bg_color:#bbbdc0, $font-size:14px){
+	background-color: $bg_color;
+	border: none;
+	color: #fff;
+	font-size:$font-size;
+	height: 20px;
+	margin: 5px 0px;
+	padding: 5px;
+	width: 300px;
+}

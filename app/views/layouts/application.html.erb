@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>SocialApp</title>
+	  <%= stylesheet_link_tag  'common'%>
+	  <%= javascript_include_tag "jquery-2.1.1.min.js","application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= render :partial => "layouts/header" %>
+		<div class="container"><%= yield %></div>
+		<%= render :partial => "layouts/footer" %>
+	</body>
+</html>

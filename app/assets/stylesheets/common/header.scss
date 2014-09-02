@@ -1,0 +1,65 @@
+.header_wrapper{
+	background-color: $main-color;
+	height:100px;
+	width:100%;
+
+	.header{
+		margin:0 auto;
+
+		.logo{
+			background-image:url('logo.png');
+			background-repeat: no-repeat;
+			float:left;
+			height:$logo-height;
+			margin: 25px 0px;
+			width:$logo-width;
+		}
+		.login.links{
+			width:300px;
+		}
+		.right_content{
+			float:right;
+			margin:10px 0px;
+			.search_wrapper{
+				float:left;
+			}
+			.search_input{
+				float:right;
+				font-family:$font-family;
+				font-size:$font-size-reg;
+				height: 25px;
+				padding: 5px 35px 5px 5px;
+				width: 300px;
+			}
+			.search{
+				background-color: transparent;
+				background-image:url('search.png');
+				background-position:  0px 0px;
+				background-repeat: no-repeat;
+				border: 0px;
+				cursor:pointer;
+				float:right;
+				height:30px;
+				left: 340px;
+				position: relative;
+				margin: 5px 0px;
+				outline: 0;
+				width:30px;
+			}
+			.links{
+				clear:both;
+				float:right;
+				margin:15px 0px;
+
+				div,a{
+					color:#fff;
+					float:left;
+					font-family:$font-family;
+					font-size:$font-size-large;
+					padding:0px 0px 0px 50px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

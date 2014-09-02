@@ -1,0 +1,7 @@
+<%= javascript_include_tag "classes/user","home" %>
+<%= stylesheet_link_tag "home" %>
+<% if session[:username].blank? && session[:email].blank? %>
+<%= render :partial => "signup" %>
+<%= render :partial => "login" %>
+
+<% end %>
